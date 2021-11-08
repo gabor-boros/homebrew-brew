@@ -7,6 +7,8 @@ class SprintUpdate < Formula
   homepage "https://github.com/gabor-boros/sprint-update"
   version "0.1.1"
   license "MIT"
+  
+  depends_on: "go" => :build
 
   on_macos do
     if Hardware::CPU.arm?
@@ -49,11 +51,7 @@ class SprintUpdate < Formula
   head "https://github.com/gabor-boros/sprint-update", branch: "main"
 
   livecheck do
-    url "https://github.com/gabor-boros/minutes/releases"
+    url "https://github.com/gabor-boros/sprint-update/releases"
     regex(/^v(\d+(?:\.\d+)+)$/i)
   end
-
-  dependencies:
-    - name: go
-      type: build
 end
