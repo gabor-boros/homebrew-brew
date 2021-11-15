@@ -5,21 +5,21 @@
 class SprintUpdate < Formula
   desc "Generate markdown formatted sprint updates based on the Jira tickets"
   homepage "https://github.com/gabor-boros/sprint-update"
-  version "0.1.2"
+  version "0.1.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/gabor-boros/sprint-update/releases/download/v0.1.2/sprint-update_0.1.2_Darwin_arm64.tar.gz"
-      sha256 "8fb72c6cfe1f0df3dca488bf029a52e25e4ad7e654bd14b4a55cea89854a0b71"
+      url "https://github.com/gabor-boros/sprint-update/releases/download/v0.1.3/sprint-update_0.1.3_Darwin_arm64.tar.gz"
+      sha256 "725a41ce161c851ed041fad266ce7a5271489cfbb530d377209ce2e80d45f23d"
 
       def install
         bin.install "sprint-update"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gabor-boros/sprint-update/releases/download/v0.1.2/sprint-update_0.1.2_Darwin_x86_64.tar.gz"
-      sha256 "218be143f133a8c24c1cf828ce37057b6c9812f0520415a55c6bc8eb52af6e00"
+      url "https://github.com/gabor-boros/sprint-update/releases/download/v0.1.3/sprint-update_0.1.3_Darwin_x86_64.tar.gz"
+      sha256 "38e686b7d748c13963430c18f362ffce94b6dce95f667d2fcf9f281d8e12125f"
 
       def install
         bin.install "sprint-update"
@@ -29,16 +29,16 @@ class SprintUpdate < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gabor-boros/sprint-update/releases/download/v0.1.2/sprint-update_0.1.2_Linux_arm64.tar.gz"
-      sha256 "d1dac2ceef898f3cb28555dffbb5342350a434d702bbd6818365ecc3ccb95f02"
+      url "https://github.com/gabor-boros/sprint-update/releases/download/v0.1.3/sprint-update_0.1.3_Linux_arm64.tar.gz"
+      sha256 "0289a49e59b922df1796f04f00f6847552d74ce5ba87c3117cb45985463efc83"
 
       def install
         bin.install "sprint-update"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gabor-boros/sprint-update/releases/download/v0.1.2/sprint-update_0.1.2_Linux_x86_64.tar.gz"
-      sha256 "6d89da5b467ae06ac2dbe23e5b6e9d71ddb1980ee6e1346e2038e3d8751525f3"
+      url "https://github.com/gabor-boros/sprint-update/releases/download/v0.1.3/sprint-update_0.1.3_Linux_x86_64.tar.gz"
+      sha256 "ae714b289a167fd36e5d52eb64da25b5a283c5e604ef9e3677407cfae8bf8b94"
 
       def install
         bin.install "sprint-update"
