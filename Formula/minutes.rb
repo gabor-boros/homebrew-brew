@@ -5,21 +5,21 @@
 class Minutes < Formula
   desc "Sync worklogs between time trackers, invoicing, and bookkeeping software"
   homepage "https://github.com/gabor-boros/minutes"
-  version "0.3.2"
+  version "0.3.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/gabor-boros/minutes/releases/download/v0.3.2/minutes_0.3.2_Darwin_arm64.tar.gz"
-      sha256 "5974879a7822846f48441a9a04d5f55e6143688c497e37041334aaaa03943491"
+      url "https://github.com/gabor-boros/minutes/releases/download/v0.3.3/minutes_0.3.3_Darwin_arm64.tar.gz"
+      sha256 "3e9b2c3b34f78dd0f8ccb7e3361017b36bde3b3be29f5c49e2344436044f49be"
 
       def install
         bin.install "minutes"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gabor-boros/minutes/releases/download/v0.3.2/minutes_0.3.2_Darwin_x86_64.tar.gz"
-      sha256 "aef43faa3c9336bd42c18e5ef9c687ff8bcb635f2a11041e0ec7180d7bc0c2bc"
+      url "https://github.com/gabor-boros/minutes/releases/download/v0.3.3/minutes_0.3.3_Darwin_x86_64.tar.gz"
+      sha256 "dac8d798e29ebea4933bd1ddb83e3d076f413d121de55ddcf7e20b47770c78b6"
 
       def install
         bin.install "minutes"
@@ -29,16 +29,16 @@ class Minutes < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gabor-boros/minutes/releases/download/v0.3.2/minutes_0.3.2_Linux_arm64.tar.gz"
-      sha256 "79f20bbb09a0487436883c1653402f9aefbe5992e9fb7ec5ee9e8a2291c55370"
+      url "https://github.com/gabor-boros/minutes/releases/download/v0.3.3/minutes_0.3.3_Linux_arm64.tar.gz"
+      sha256 "b2d0ea2265206bc348d8c2c65f8a7e3ecab49706a87298ab88938f8964b99b91"
 
       def install
         bin.install "minutes"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gabor-boros/minutes/releases/download/v0.3.2/minutes_0.3.2_Linux_x86_64.tar.gz"
-      sha256 "3337c5c430f81093e4e7f43bb33385af7dd095acf99fb41d341a935b0b95eddb"
+      url "https://github.com/gabor-boros/minutes/releases/download/v0.3.3/minutes_0.3.3_Linux_x86_64.tar.gz"
+      sha256 "0c9b6077d49876d53138ec687591aff8c07cbe918d3df34c07c923f6640c66a9"
 
       def install
         bin.install "minutes"
