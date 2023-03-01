@@ -5,21 +5,21 @@
 class Arangom < Formula
   desc "Run ArangoDB migrations with ease."
   homepage "https://github.com/gabor-boros/arangom"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/gabor-boros/arangom/releases/download/v0.1.0/arangom_0.1.0_Darwin_arm64.tar.gz"
-      sha256 "bfe757cc0b068d66ed941f0f128db1e5d580822ad61dddadcdcd056c765c592b"
+      url "https://github.com/gabor-boros/arangom/releases/download/v0.2.0/arangom_0.2.0_Darwin_arm64.tar.gz"
+      sha256 "1a135bdfb078ce3680a8271ebe34655b7c45ccd7b3e7c17857cd2dc2c2d9def2"
 
       def install
         bin.install "arangom"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gabor-boros/arangom/releases/download/v0.1.0/arangom_0.1.0_Darwin_x86_64.tar.gz"
-      sha256 "b01bb28bd540e9a9448aa39eb060c75e38e19f560b581ed4bc58c5c7300576fd"
+      url "https://github.com/gabor-boros/arangom/releases/download/v0.2.0/arangom_0.2.0_Darwin_x86_64.tar.gz"
+      sha256 "736edcfdc9a30ca363cb4c6a983f9dcb7ba149c600d97b4006fb30401d109f3b"
 
       def install
         bin.install "arangom"
@@ -29,16 +29,16 @@ class Arangom < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gabor-boros/arangom/releases/download/v0.1.0/arangom_0.1.0_Linux_arm64.tar.gz"
-      sha256 "3be6a2bf9782fb9bb37dc69593f1b365ebc03e9038e14fbc1194bccd4b67eb99"
+      url "https://github.com/gabor-boros/arangom/releases/download/v0.2.0/arangom_0.2.0_Linux_arm64.tar.gz"
+      sha256 "e5d43ecf99ba406ebd66a085330a4352ede96cedbc412552155eb58f5a1a70c5"
 
       def install
         bin.install "arangom"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gabor-boros/arangom/releases/download/v0.1.0/arangom_0.1.0_Linux_x86_64.tar.gz"
-      sha256 "38299d281b5a438339dcf6b49bcba0a5b5c9d270fc9d1d21c4b6abff9a8fc5e1"
+      url "https://github.com/gabor-boros/arangom/releases/download/v0.2.0/arangom_0.2.0_Linux_x86_64.tar.gz"
+      sha256 "db4eda385172094060284ade8368a532ae7a1ebad7c38a9d3ce411152f6c1567"
 
       def install
         bin.install "arangom"
