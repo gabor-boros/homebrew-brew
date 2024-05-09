@@ -5,21 +5,23 @@
 class Arangom < Formula
   desc "Run ArangoDB migrations with ease."
   homepage "https://github.com/gabor-boros/arangom"
-  version "0.2.0"
+  version "0.3.0"
   license "MIT"
 
+  depends_on "go" => :build
+
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/gabor-boros/arangom/releases/download/v0.2.0/arangom_0.2.0_Darwin_arm64.tar.gz"
-      sha256 "1a135bdfb078ce3680a8271ebe34655b7c45ccd7b3e7c17857cd2dc2c2d9def2"
+    if Hardware::CPU.intel?
+      url "https://github.com/gabor-boros/arangom/releases/download/v0.3.0/arangom_Darwin_x86_64.tar.gz"
+      sha256 "ab05ce276608084a1e677cdb6dd04af26cf0e4a164c5f8c9d110dbe840be4e73"
 
       def install
         bin.install "arangom"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/gabor-boros/arangom/releases/download/v0.2.0/arangom_0.2.0_Darwin_x86_64.tar.gz"
-      sha256 "736edcfdc9a30ca363cb4c6a983f9dcb7ba149c600d97b4006fb30401d109f3b"
+    if Hardware::CPU.arm?
+      url "https://github.com/gabor-boros/arangom/releases/download/v0.3.0/arangom_Darwin_arm64.tar.gz"
+      sha256 "4f5fcaddc54dfc26b192a4a460014a10e6f82a0309c20a4d65ed5afb4cca12a0"
 
       def install
         bin.install "arangom"
@@ -28,17 +30,17 @@ class Arangom < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gabor-boros/arangom/releases/download/v0.2.0/arangom_0.2.0_Linux_arm64.tar.gz"
-      sha256 "e5d43ecf99ba406ebd66a085330a4352ede96cedbc412552155eb58f5a1a70c5"
+    if Hardware::CPU.intel?
+      url "https://github.com/gabor-boros/arangom/releases/download/v0.3.0/arangom_Linux_x86_64.tar.gz"
+      sha256 "804c7e9c1d6f34c1e102c4c2f9852355c66c7ec108e41752360a41ec94b06afc"
 
       def install
         bin.install "arangom"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/gabor-boros/arangom/releases/download/v0.2.0/arangom_0.2.0_Linux_x86_64.tar.gz"
-      sha256 "db4eda385172094060284ade8368a532ae7a1ebad7c38a9d3ce411152f6c1567"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/gabor-boros/arangom/releases/download/v0.3.0/arangom_Linux_arm64.tar.gz"
+      sha256 "f06e83ce1b5fe02450df6b89af4fcf9f230f0aa9d82f9ece463678c4cda42863"
 
       def install
         bin.install "arangom"
@@ -52,6 +54,4 @@ class Arangom < Formula
     url "https://github.com/gabor-boros/arangom/releases"
     regex(/^v(\d+(?:\.\d+)+)$/i)
   end
-
-  depends_on "go" => :build
 end
