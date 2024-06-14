@@ -5,21 +5,23 @@
 class Minutes < Formula
   desc "Sync worklogs between time trackers, invoicing, and bookkeeping software"
   homepage "https://github.com/gabor-boros/minutes"
-  version "0.3.3"
+  version "0.3.4"
   license "MIT"
 
+  depends_on "go" => :build
+
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/gabor-boros/minutes/releases/download/v0.3.3/minutes_0.3.3_Darwin_arm64.tar.gz"
-      sha256 "3e9b2c3b34f78dd0f8ccb7e3361017b36bde3b3be29f5c49e2344436044f49be"
+    on_intel do
+      url "https://github.com/gabor-boros/minutes/releases/download/v0.3.4/minutes_Darwin_x86_64.tar.gz"
+      sha256 "10633a082939e4e9dbdcd67c2004db17fced2bb1ea71f12b12aa9509846f2ca0"
 
       def install
         bin.install "minutes"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/gabor-boros/minutes/releases/download/v0.3.3/minutes_0.3.3_Darwin_x86_64.tar.gz"
-      sha256 "dac8d798e29ebea4933bd1ddb83e3d076f413d121de55ddcf7e20b47770c78b6"
+    on_arm do
+      url "https://github.com/gabor-boros/minutes/releases/download/v0.3.4/minutes_Darwin_arm64.tar.gz"
+      sha256 "b75c6365c0543d004bffccbd07401174689d35183ca35a779f079583737fe73e"
 
       def install
         bin.install "minutes"
@@ -28,20 +30,24 @@ class Minutes < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gabor-boros/minutes/releases/download/v0.3.3/minutes_0.3.3_Linux_arm64.tar.gz"
-      sha256 "b2d0ea2265206bc348d8c2c65f8a7e3ecab49706a87298ab88938f8964b99b91"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/gabor-boros/minutes/releases/download/v0.3.4/minutes_Linux_x86_64.tar.gz"
+        sha256 "232dfc8c88e11e8694321140dc99597e34bdd4d2a35df53f75dc9076293a3c29"
 
-      def install
-        bin.install "minutes"
+        def install
+          bin.install "minutes"
+        end
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/gabor-boros/minutes/releases/download/v0.3.3/minutes_0.3.3_Linux_x86_64.tar.gz"
-      sha256 "0c9b6077d49876d53138ec687591aff8c07cbe918d3df34c07c923f6640c66a9"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/gabor-boros/minutes/releases/download/v0.3.4/minutes_Linux_arm64.tar.gz"
+        sha256 "8c637662a1d94280354795536bbdbd5236d8beda1e0843a2cccf80bcc6d5d905"
 
-      def install
-        bin.install "minutes"
+        def install
+          bin.install "minutes"
+        end
       end
     end
   end
@@ -52,6 +58,4 @@ class Minutes < Formula
     url "https://github.com/gabor-boros/minutes/releases"
     regex(/^v(\d+(?:\.\d+)+)$/i)
   end
-
-  depends_on "go" => :build
 end
