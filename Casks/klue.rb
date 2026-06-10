@@ -4,22 +4,22 @@ cask "klue" do
 
   on_macos do
     on_intel do
-      sha256 "0acb3a14a1b56ab3a836a612bbe1f2caa09d26ce05ea1b6d0af83fa37dc180dc"
+      sha256 "70c74fd2babd3bda8da164d516ceeb2aff53c1ae6350cfd2ea73a0b9bb7c5606"
       url "https://github.com/gabor-boros/klue/releases/download/v#{version}/klue_#{version}_darwin_amd64.tar.gz"
     end
     on_arm do
-      sha256 "6ca1d3f2b2475cb800b7b730de1c8c74e2bca47403f4cdfbc643234ead52a402"
+      sha256 "c30dde30f7aa9cf676f6dda24a5ea855d775cf0645df518bf6cefb8e49af2ddf"
       url "https://github.com/gabor-boros/klue/releases/download/v#{version}/klue_#{version}_darwin_arm64.tar.gz"
     end
   end
 
   on_linux do
     on_intel do
-      sha256 "1d0b5e46e5be889c995ed56223a454bb2da8ca90d93a56bd6eabfb0abb5beb1b"
+      sha256 "3a875c92627e3c311bc1d2ea99d032419652a42868a7272bd224e8ce3733273d"
       url "https://github.com/gabor-boros/klue/releases/download/v#{version}/klue_#{version}_linux_amd64.tar.gz"
     end
     on_arm do
-      sha256 "b802dcf5e32ae9e5fcd3c834711d017fafd26da29d28d719d8f84ccdedb5c651"
+      sha256 "d4f5705d91d1512db51ee8a3640620812f77b3b0bacefc8eab30d2fa77188852"
       url "https://github.com/gabor-boros/klue/releases/download/v#{version}/klue_#{version}_linux_arm64.tar.gz"
     end
   end
