@@ -5,25 +5,25 @@ cask "arangom" do
     regex(/^v(\d+(?:\.\d+)+)$/i)
   end
 
-  version "0.4.1"
+  version "0.5.0"
 
   on_macos do
     on_arm do
-      sha256 "3e880aa0d2bbd5814c4952eefe42e0e37168ea62d9c66d966dbc24c2ce47faf1"
+      sha256 "230fae7558d40566c1f84e872adcda1e98337b5550af6d27a1f24e7f34e8eafb"
       url "https://github.com/gabor-boros/arangom/releases/download/v#{version}/arangom_Darwin_arm64.tar.gz"
     end
     on_intel do
-      sha256 "4ae30e6ea3686552327a3adcb20ed03aa06f0bd96d3b947edf3cc74984cce54c"
+      sha256 "97ff980c991ad0f2ef62a3ce707b31fa59f551c7e1e3ab829fc5f4fbd096728c"
       url "https://github.com/gabor-boros/arangom/releases/download/v#{version}/arangom_Darwin_x86_64.tar.gz"
     end
   end
   on_linux do
     on_arm do
-      sha256 "e6d0f1a99eacfa07cadd73e89a004d0f5e194e0c2794cf945a3cd9e25d7dda17"
+      sha256 "265a2744eff91ac8f11415b777969c00d08922bdce8bcba3fdc7c6bd0c6891df"
       url "https://github.com/gabor-boros/arangom/releases/download/v#{version}/arangom_Linux_arm64.tar.gz"
     end
     on_intel do
-      sha256 "602be431871dcb069554544a5e0a7ce8d487a6a0bb597af02868fc85f5251202"
+      sha256 "f03c30416f89ac50617b74b10eac51792c7a3f2afbd2602431bcb9bc554c38d5"
       url "https://github.com/gabor-boros/arangom/releases/download/v#{version}/arangom_Linux_x86_64.tar.gz"
     end
   end
